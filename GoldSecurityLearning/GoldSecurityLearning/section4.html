@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldSecurity Learning - Fake Ads Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+        
+        /* Content container */
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 0 20px;
+        }
+        
+        /* Section header */
+        .section-title {
+            color: #E67E22;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        
+        /* Info cards */
+        .info-card {
+            background: #FFF8E7;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 5px solid #FFA500;
+        }
+        
+        .info-card h3 {
+            color: #D35400;
+            margin-top: 0;
+        }
+        
+        /* Example boxes */
+        .example-box {
+            background: white;
+            border: 1px solid #FFE0B2;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .example-box.warning {
+            border-left: 4px solid #E74C3C;
+        }
+        
+        /* Tip boxes */
+        .tip-box {
+            background: #E8F8F5;
+            border-left: 5px solid #2ECC71;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons" id="userSection">
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <!-- About Button -->
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <!-- Sign In and Register Buttons -->
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+
+ <!-- Main content area -->
+ <div class="main-frame">
+    <div class="section-content">
+        <h1 class="section-title"><i class="fas fa-ad"></i> Fake Ads Information</h1>
+        
+        <!-- Introduction Card -->
+        <div class="info-card">
+            <h2>What Are Fake Ads?</h2>
+            <p>Fake ads are fraudulent online advertisements designed to trick users into:</p>
+            <ul>
+                <li>Downloading malware or spyware</li>
+                <li>Entering personal/financial information</li>
+                <li>Purchasing non-existent products</li>
+                <li>Signing up for fraudulent services</li>
+            </ul>
+            <p>These ads often appear on legitimate websites and social media platforms, making them harder to distinguish from real advertisements.</p>
+        </div>
+        
+        <!-- How It Works Card -->
+        <div class="info-card">
+            <h2>How Fake Ads Work</h2>
+            <p>Scammers use sophisticated techniques to make fake ads appear legitimate:</p>
+            <ol>
+                <li><strong>Placement:</strong> Ads appear on reputable sites through compromised ad networks</li>
+                <li><strong>Design:</strong> Professional-looking graphics mimic real brands</li>
+                <li><strong>Urgency:</strong> "Limited time offers" pressure quick decisions</li>
+                <li><strong>Deception:</strong> Fake celebrity endorsements or "user testimonials"</li>
+                <li><strong>Malicious links:</strong> Buttons that download malware or lead to phishing sites</li>
+            </ol>
+            <p>The goal is to exploit your trust in the website displaying the ad.</p>
+        </div>
+        
+        <!-- Example Box -->
+        <div class="example-box warning">
+            <h3><i class="fas fa-exclamation-triangle"></i> Fake Ad/Pop-Up Example</h3>
+            <p>Here's how a typical fake antivirus ad might appear:</p>
+            
+            <div style="border: 1px solid #ddd; padding: 15px; max-width: 300px; margin: 15px auto; background: #f9f9f9;">
+                <img src="warning-icon.png" alt="" style="width: 50px; float: left; margin-right: 10px;">
+                <h4 style="margin-top: 0; color: #c00;">VIRUS DETECTED!</h4>
+                <p>Your device has 3 viruses. Immediate action required.</p>
+                <button style="background: #c00; color: white; border: none; padding: 8px 15px; border-radius: 4px;">Scan Now</button>
+                <p style="font-size: 0.8em; color: #777;">Windows Security Alert • 2 minutes ago</p>
+            </div>
+            
+            <div style="background: #FFF8E7; padding: 15px; border-left: 4px solid #E67E22; margin: 20px 0;">
+                <h3 style="color: #D35400; margin-top: 0;">Why This Is Fake:</h3>
+                <ul>
+                    <li><strong>False urgency:</strong> Creates panic to bypass your caution</li>
+                    <li><strong>Generic warning:</strong> Doesn't name specific threats</li>
+                    <li><strong>Fake branding:</strong> Uses Windows-like design but isn't from Microsoft</li>
+                    <li><strong>No legitimate company:</strong> Would contact you this way about viruses</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Common Scams Card -->
+        <div class="info-card">
+            <h2>Common Fake Ad Scams</h2>
+            <p>Watch out for these frequent fake ad types:</p>
+            
+            <h3>1. Fake Antivirus Warnings</h3>
+            <p>Alerts claiming your device is infected, prompting you to download malware.</p>
+            
+            <h3>2. Celebrity Endorsements</h3>
+            <p>Ads featuring celebrities hawking questionable products they've never actually endorsed.</p>
+            
+            <h3>3. "Free" Gift Cards</h3>
+            <p>Offers for free Amazon/Walmart gift cards that lead to survey scams.</p>
+            
+            <h3>4. Too-Good-To-Be-True Deals</h3>
+            <p>Extreme discounts on luxury items that are either counterfeit or don't exist.</p>
+            
+            <h3>5. Fake Job Opportunities</h3>
+            <p>Work-from-home ads that are actually money laundering or identity theft schemes.</p>
+        </div>
+        
+        <!-- Protection Tips Card -->
+        <div class="info-card">
+            <h2>How to Protect Yourself</h2>
+            <p>Follow these guidelines to avoid fake ad scams:</p>
+            
+            <div class="tip-box">
+                <h4><i class="fas fa-lightbulb"></i> Safety Tip</h4>
+                <p>Never download software or click "scan" buttons in ads - legitimate security companies don't advertise this way.</p>
+            </div>
+            
+            <h3>Verification Steps</h3>
+            <ul>
+                <li><strong>Check URLs:</strong> Hover over links to see the real destination</li>
+                <li><strong>Research companies:</strong> Search for "[company name] scam" before engaging</li>
+                <li><strong>Look for reviews:</strong> Real products have organic reviews across multiple sites</li>
+                <li><strong>Contact directly:</strong> Use official websites/numbers to verify offers</li>
+            </ul>
+            
+            <h3>Technical Protections</h3>
+            <ul>
+                <li>Use ad blockers to reduce exposure to malicious ads</li>
+                <li>Keep browsers and plugins updated to patch security holes</li>
+                <li>Install reputable security software with web protection</li>
+                <li>Enable click-to-play for browser plugins</li>
+            </ul>
+            
+            <div class="tip-box">
+                <h4><i class="fas fa-lightbulb"></i> Shopping Tip</h4>
+                <p>If an ad offers luxury items at 80% off, it's absolutely fake - luxury brands never discount heavily.</p>
+            </div>
+        </div>
+        
+        <!-- What to Do If Scammed Card -->
+        <div class="info-card">
+            <h2>What to Do If You Clicked a Fake Ad</h2>
+            <p>If you interacted with a suspicious ad:</p>
+            <ol>
+                <li><strong>Disconnect from internet</strong> if you downloaded anything</li>
+                <li><strong>Run antivirus scans</strong> on your device</li>
+                <li><strong>Change passwords</strong> if you entered login credentials</li>
+                <li><strong>Contact banks</strong> if you entered payment information</li>
+                <li><strong>Report the ad</strong> to the platform where you saw it</li>
+                <li><strong>Monitor accounts</strong> for suspicious activity</li>
+            </ol>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="action-btn"><i class="fas fa-home"></i> Back to Home</a>
+            <a href="section4assessment.html" class="action-btn"><i class="fas fa-shield-alt"></i> Take Fake Ads Test</a>
+        </div>
+    </div>
+</div>
+
+
+    <!--Footer-->
+    <footer>
+        <!--Privacy Policy Button-->
+        <a href="privacypolicy.html" class="footer-btn"><i class="fas fa-lock"></i> Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js">
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(event.target) && 
+                event.target !== mobileMenuBtn) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - GoldSecurity Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* About page specific styles */
+        .about-container {
+            max-width: 800px;
+            margin: 120px auto 0;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #FFE0B2;
+        }
+
+        .about-container h2 {
+            color: #E67E22;
+            margin-top: 0;
+        }
+
+        .about-container h3 {
+            color: #D35400;
+        }
+
+        .about-container ul {
+            padding-left: 20px;
+        }
+
+        .about-container li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #E67E22;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #D35400;
+            text-decoration: underline;
+        }
+
+        @media(max-width: 768px){
+            .about-container {
+                margin: 100px 20px 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with website title and navigation -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons", id="userSection">
+            <!-- Table of Contents Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <!-- Sign In Button -->
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <!-- Register Button -->
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    </div>
+
+    <!-- About Content -->
+    <div class="about-container">
+        <h2>About GoldSecurity Learning</h2>
+        <p>This website serves as an assessment tool designed to help users analyze and improve their cybersecurity knowledge efficiently. This assessment tool was designed with emphasis on the elderly population. You are guaranteed to learn everything you need to learn after completing all sections and its assessments.</p>
+        
+        <h3><i class="fas fa-bullseye"></i> Our Aims:</h3>
+        <ul>
+            <li><i class="fas fa-shield-alt"></i> Provide structured assessment tools that aim to help the elderly learn about security risks</li>
+            <li><i class="fas fa-check-circle"></i> Test users on section topics to reinforce their knowledge and simulate real-world experiences</li>
+            <li><i class="fas fa-chart-line"></i> Help users track progress throughout the different sections and assessments</li>
+            <li><i class="fas fa-heart"></i> Make an impact on the elderly population and spread awareness about cybersecurity importance</li>
+        </ul>
+
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <a href="privacypolicy.html" class="footer-btn"><i class="fas fa-lock"></i> Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

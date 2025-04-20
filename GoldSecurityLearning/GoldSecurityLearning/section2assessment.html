@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldSecurity Learning - Vishing Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quiz-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons" id="userSection">
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+
+    <!-- Quiz Content -->
+    <div class="main-frame">
+        <div class="quiz-container">
+            <h1 class="quiz-title"><i class="fas fa-phone"></i> Vishing Quiz</h1>
+            <div class="quiz-progress">Question 1 of 5 | Score: 0/5</div>
+            
+          <!-- Question 1 -->
+<div class="question-card active" data-correct="b">
+    <div class="question-text">1. What is vishing?</div>
+    <div class="answer-option" data-option="a">
+        A type of email scam that uses voice recordings
+        <div class="answer-explanation"> Vishing specifically uses phone calls, not email.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        A phone scam where criminals impersonate legitimate organizations
+        <div class="answer-explanation">Correct! Vishing (voice phishing) uses phone calls to trick victims.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        A security feature that verifies voice patterns
+        <div class="answer-explanation"> This describes voice authentication, not vishing.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        An automated telemarketing system
+        <div class="answer-explanation"> Vishing is malicious, not just annoying telemarketing.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i> Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 2 -->
+<div class="question-card" data-correct="a">
+    <div class="question-text">2. Which of these is a sign of a scam call?</div>
+    <div class="answer-option" data-option="a">
+        A caller asks for payment in gift cards
+        <div class="answer-explanation">Correct! Legitimate organizations never demand payment in gift cards.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        A caller is from your doctor's office
+        <div class="answer-explanation"> This could be a legitimate call if you're expecting it.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        A caller asks for your zip code
+        <div class="answer-explanation">While odd, this alone isn't necessarily a scam indicator.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        A caller wants to confirm your appointment
+        <div class="answer-explanation">This is normal practice for many businesses.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i> Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 3 -->
+<div class="question-card" data-correct="b">
+    <div class="question-text">3. You get a phone call saying, "This is the IRS. You owe money." What should you do?</div>
+    <div class="answer-option" data-option="a">
+        Give them your Social Security Number
+        <div class="answer-explanation"> Never give sensitive information to unsolicited callers.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        Hang up and call the IRS directly to verify
+        <div class="answer-explanation">Correct! Always contact organizations using official numbers.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        Ask them for proof of the debt
+        <div class="answer-explanation"> Scammers can fake documents - just hang up.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        Pay them using gift cards
+        <div class="answer-explanation"> The IRS never demands immediate payment via gift cards.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i> Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 4 -->
+<div class="question-card" data-correct="b">
+    <div class="question-text">4. You receive a call saying your internet service will be disconnected unless you make an immediate payment. What should you do?</div>
+    <div class="answer-option" data-option="a">
+        Provide your credit card details to avoid disconnection
+        <div class="answer-explanation">Never give payment info to unsolicited callers.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        Hang up and contact your internet provider directly
+        <div class="answer-explanation">Correct! Use the number on your bill or official website to verify.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        Ask the caller how to prevent the suspension
+        <div class="answer-explanation">Engaging with scammers gives them more opportunities to trick you.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        Pay using gift cards to resolve the issue
+        <div class="answer-explanation">Legitimate companies don't demand gift card payments.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i>  Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 5  -->
+<div class="question-card" data-correct="c">
+    <div class="question-text">5. What's the most common way scammers make their caller ID appear legitimate?</div>
+    <div class="answer-option" data-option="a">
+        By registering a real business name
+        <div class="answer-explanation">Scammers don't legally register their fake identities.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        By calling from the organization's actual phone number
+        <div class="answer-explanation">They spoof numbers rather than call from real ones.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        By using caller ID spoofing technology
+        <div class="answer-explanation">Correct! Spoofing lets them display any number they choose.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        By having employees call from inside the company
+        <div class="answer-explanation">These are criminal operations, not actual employees.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i> Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+            <!-- Quiz Feedback -->
+            <div class="quiz-feedback pass">
+                <h3><i class="fas fa-check-circle"></i> Congratulations!</h3>
+                <p>You scored <span id="final-score">0</span>/5! You've successfully completed this quiz.</p>
+                <p>Your progress has been updated.</p>
+                <a href="index.html" class="action-btn" style="margin-top: 15px;"><i class="fas fa-home"></i> Return to Home</a>
+            </div>
+            
+            <div class="quiz-feedback fail">
+                <h3><i class="fas fa-times-circle"></i> Try Again</h3>
+                <p>You scored <span id="final-score-fail">0</span>/5. Please review the explanations and try again.</p>
+                <a href="section2.html" class="action-btn" style="margin-top: 15px;"><i class="fas fa-book"></i> Review Vishing Info</a>
+                <button id="retryQuiz" class="action-btn" style="margin-top: 15px;"><i class="fas fa-redo"></i> Retry Quiz</button>
+            </div>
+            
+            <div class="quiz-navigation">
+                <button id="prevQuestion" class="quiz-btn" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+                <button id="nextQuestion" class="quiz-btn">Next <i class="fas fa-arrow-right"></i></button>
+                <button id="showResults" class="quiz-btn" style="display: none;"><i class="fas fa-chart-bar"></i> View Results</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="privacypolicy.html" class="footer-btn"><i class="fas fa-lock"></i> Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js">
+       
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(event.target) && 
+                event.target !== mobileMenuBtn) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

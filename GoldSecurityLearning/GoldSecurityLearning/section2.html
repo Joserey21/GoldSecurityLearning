@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldSecurity Learning - Vishing Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+        
+        /* Content container */
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 0 20px;
+        }
+        
+        /* Section header */
+        .section-title {
+            color: #E67E22;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        
+        /* Info cards */
+        .info-card {
+            background: #FFF8E7;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 5px solid #FFA500;
+        }
+        
+        .info-card h3 {
+            color: #D35400;
+            margin-top: 0;
+        }
+        
+        /* Example boxes */
+        .example-box {
+            background: white;
+            border: 1px solid #FFE0B2;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .example-box.warning {
+            border-left: 4px solid #E74C3C;
+        }
+        
+        /* Tip boxes */
+        .tip-box {
+            background: #E8F8F5;
+            border-left: 5px solid #2ECC71;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        
+        /* Call transcript styling */
+        .call-transcript {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: monospace;
+        }
+        
+        .caller {
+            color: #E74C3C;
+            font-weight: bold;
+        }
+        
+        .you {
+            color: #2ECC71;
+            font-weight: bold;
+        }
+        
+        .call-note {
+            font-style: italic;
+            color: #7F8C8D;
+            margin: 5px 0 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons" id="userSection">
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-frame">
+        <div class="section-content">
+            <h1 class="section-title"><i class="fas fa-phone"></i> Vishing Information</h1>
+            
+            <!-- Introduction Card -->
+            <div class="info-card">
+                <h2>What is Vishing?</h2>
+                <p>Vishing (voice phishing) is a phone scam where criminals call pretending to be from trusted organizations to trick you into revealing personal or financial information. These scams often target:</p>
+                <ul>
+                    <li>Bank account credentials and credit card numbers</li>
+                    <li>Social Security numbers and other identity information</li>
+                    <li>Remote access to your computer</li>
+                    <li>Payment through gift cards or wire transfers</li>
+                </ul>
+                <p>Scammers often use caller ID spoofing to make calls appear to come from legitimate numbers, making vishing particularly dangerous.</p>
+            </div>
+            
+            <!-- How It Works Card -->
+            <div class="info-card">
+                <h2>How Vishing Works</h2>
+                <p>Vishing attacks typically follow these steps:</p>
+                <ol>
+                    <li><strong>Spoofing caller ID:</strong> Scammers make the call appear to come from a trusted source (your bank, government agency, tech support)</li>
+                    <li><strong>Creating urgency:</strong> They claim there's an emergency (frozen account, suspicious activity, tax issue) that requires immediate action</li>
+                    <li><strong>Requesting information:</strong> They ask for sensitive data like passwords, PINs, or account numbers</li>
+                    <li><strong>Remote access:</strong> In tech support scams, they may ask you to install software giving them control of your computer</li>
+                    <li><strong>Payment demand:</strong> They often demand payment through untraceable methods like gift cards or wire transfers</li>
+                </ol>
+            </div>
+            
+            <!-- Example Box -->
+            <div class="example-box warning">
+                <h3><i class="fas fa-exclamation-triangle"></i> Example of a Vishing Call</h3>
+                <p>Here's a realistic transcript of a common bank-related vishing scam:</p>
+                
+                <div class="call-transcript">
+                    <p class="call-note">[Phone rings. Caller ID shows your bank's name and a familiar-looking number]</p>
+                    
+                    <p><span class="caller">Caller:</span> "Hello, this is Robert from Security Department at [Your Bank]. We've detected suspicious activity on your account. Is this [Your Name]?"</p>
+                    
+                    <p><span class="you">You:</span> "Yes, that's me."</p>
+                    
+                    <p><span class="caller">Caller:</span> "For security purposes, I need to verify some information with you. We've noticed three unauthorized transactions totaling $1,200 from your checking account to an overseas merchant. Did you authorize these?"</p>
+                    
+                    <p><span class="you">You:</span> "No, I didn't make those!"</p>
+                    
+                    <p><span class="caller">Caller:</span> "I'm sorry to hear that, but we can stop these transactions if we act quickly. First, I need to verify your identity. Can you confirm your full account number and the last four digits of your Social Security number?"</p>
+                    
+                    <p class="call-note">[If you hesitate or refuse...]</p>
+                    
+                    <p><span class="caller">Caller:</span> "Sir/Ma'am, if we don't verify your identity immediately, we won't be able to stop these fraudulent charges. Time is of the essence here. Your entire account could be drained within the hour."</p>
+                </div>
+                
+                <div class="phishing-red-flags" style="background: #FFF8E7; padding: 15px; border-left: 4px solid #E67E22; margin: 20px auto; max-width: 600px;">
+                    <h3 style="color: #D35400; margin-top: 0;">Red Flags in This Call:</h3>
+                    <ol>
+                        <li><strong>Caller ID spoofing:</strong> Scammers can fake any number, even your bank's real number</li>
+                        <li><strong>Creating false urgency:</strong> Pressuring you to act immediately without thinking</li>
+                        <li><strong>Requesting sensitive information:</strong> Legitimate banks never ask for full account numbers or SSN over the phone</li>
+                        <li><strong>Threatening consequences:</strong> Using scare tactics to bypass your caution</li>
+                        <li><strong>No verification of who YOU are:</strong> They already "know" they're talking to the account holder</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Common Scams Card -->
+            <div class="info-card">
+                <h2>Common Vishing Scenarios</h2>
+                <p>Be especially wary of these frequent vishing scams:</p>
+                
+                <h3>1. Bank Fraud Alerts</h3>
+                <p>Caller claims to be from your bank reporting suspicious activity and needs to "verify" your account details.</p>
+                
+                <h3>2. Tech Support Scams</h3>
+                <p>Caller says they're from Microsoft/Apple/your ISP and your computer has viruses they need to fix remotely.</p>
+                
+                <h3>3. Government Impersonation</h3>
+                <p>Caller pretends to be from IRS, Social Security, or Medicare threatening legal action unless you pay immediately.</p>
+                
+                <h3>4. Package Delivery Issues</h3>
+                <p>Caller claims to be from FedEx/USPS/UPS about a package that can't be delivered without payment or information.</p>
+                
+                <h3>5. Relative in Trouble</h3>
+                <p>"Grandparent scam" where caller pretends to be a family member needing emergency money.</p>
+            </div>
+            
+            <!-- Protection Tips Card -->
+            <div class="info-card">
+                <h2>How to Protect Yourself</h2>
+                <ul>
+                <li>Follow these guidelines to avoid falling victim to vishing scams:</li>
+                <li>If you receive a suspicious call, hang up and call back using a verified phone number from the organization's official website or your account statements.</li>
+                <li>Never provide sensitive information (passwords, SSN, account numbers) to unsolicited callers. Legitimate organizations already have this information.</li>
+                <li>Be extremely wary of callers creating urgency or threatening consequences if you don't act immediately. This is a hallmark of scams.</li>
+                <li>Remember that caller ID can be easily faked. Don't trust calls just because they appear to come from a familiar number.</li>
+                <li>Consider registering your number on the National Do Not Call Registry and using call-blocking apps to reduce scam calls.</li>
+            </ul>
+                <div class="tip-box">
+                    <h4><i class="fas fa-lightbulb"></i> Safety Tip</h4>
+                    <p>No legitimate organization will demand payment via gift cards, cryptocurrency, or wire transfers. These payment methods are red flags for scams.</p>
+                </div>
+                
+            </div>
+            
+            <!-- What to Do If Scammed -->
+            <div class="info-card">
+                <h2>What to Do If You Fell for a Vishing Scam</h2>
+                <p>If you suspect you've been victimized:</p>
+                <ol>
+                    <li><strong>Financial accounts:</strong> Immediately contact your bank or credit card company to report unauthorized transactions</li>
+                    <li><strong>Computer access:</strong> If you installed software or gave remote access, disconnect from internet and run antivirus scans</li>
+                    <li><strong>Identity theft:</strong> Place fraud alerts with credit bureaus if personal information was shared</li>
+                    <li><strong>Report it:</strong> File reports with FTC (ReportFraud.ftc.gov) and your local law enforcement</li>
+                    <li><strong>Monitor accounts:</strong> Watch all financial accounts closely for unusual activity</li>
+                </ol>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="action-btn"><i class="fas fa-home"></i> Back to Home</a>
+                <a href="section2assessment.html" class="action-btn"><i class="fas fa-shield-alt"></i> Take Vishing Test</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="privacypolicy.html" class="footer-btn"><i class="fas fa-lock"></i> Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js">
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(event.target) && 
+                event.target !== mobileMenuBtn) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
