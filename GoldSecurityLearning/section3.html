@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldSecurity Learning - Smishing Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      
+        
+        /* Content container */
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 0 20px;
+        }
+        
+        /* Section header */
+        .section-title {
+            color: #E67E22;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        
+        /* Info cards */
+        .info-card {
+            background: #FFF8E7;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 5px solid #FFA500;
+        }
+        
+        .info-card h3 {
+            color: #D35400;
+            margin-top: 0;
+        }
+        
+        /* Example boxes */
+        .example-box {
+            background: white;
+            border: 1px solid #FFE0B2;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .example-box.warning {
+            border-left: 4px solid #E74C3C;
+        }
+        
+        /* Tip boxes */
+        .tip-box {
+            background: #E8F8F5;
+            border-left: 5px solid #2ECC71;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons" id="userSection">
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <!-- About Button -->
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <!-- Sign In and Register Buttons -->
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <!-- Mobile Men -->
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-frame">
+        <div class="section-content">
+            <h1 class="section-title"><i class="fas fa-sms"></i> Smishing Information</h1>
+            
+            <!-- Introduction Card -->
+            <div class="info-card">
+                <h2>What is Smishing?</h2>
+                <p>Smishing (SMS phishing) is a scam where criminals send fraudulent text messages pretending to be from legitimate companies or organizations to steal your personal information or install malware on your device. These scams often target:</p>
+                <ul>
+                    <li>Bank account and credit card information</li>
+                    <li>Login credentials for online accounts</li>
+                    <li>Personal identification details</li>
+                    <li>Payment through gift cards or money transfers</li>
+                </ul>
+                <p>Smishing attacks have increased by 328% in recent years as more people rely on text messaging for communication.</p>
+            </div>
+            
+            <!-- How It Works Card -->
+            <div class="info-card">
+                <h2>How Smishing Works</h2>
+                <p>Scammers use sophisticated techniques to make their text messages appear legitimate:</p>
+                <ol>
+                    <li><strong>Spoofed sender IDs:</strong> Messages appear to come from familiar numbers or shortcodes</li>
+                    <li><strong>Urgent requests:</strong> Claims your account is compromised or package can't be delivered</li>
+                    <li><strong>Malicious links:</strong> Shortened URLs that lead to fake login pages</li>
+                    <li><strong>Fake customer service:</strong> Requests to call fraudulent support numbers</li>
+                    <li><strong>Malware downloads:</strong> Attachments that install spyware or ransomware</li>
+                </ol>
+                <p>The goal is to bypass your natural suspicion by creating a sense of urgency or importance.</p>
+            </div>
+            
+            <!-- Example Box -->
+            <div class="example-box warning">
+                <h3><i class="fas fa-exclamation-triangle"></i> Example of a Smishing Text</h3>
+                <p>Here's a realistic example of a bank-related smishing attempt:</p>
+                
+                <div style="background: #f0f0f0; border-radius: 8px; padding: 15px; margin: 15px 0; font-family: Arial; max-width: 300px;">
+                    <p><strong>Chase Alert:</strong> Unusual $1,200 charge from Amazon. Reply Y to confirm or N to deny. If unrecognized, secure your account: <span style="color: blue;">chase-secure.live/account</span></p>
+                </div>
+                
+                <div style="background: #FFF8E7; padding: 15px; border-left: 4px solid #E67E22; margin: 20px 0;">
+                    <h3 style="color: #D35400; margin-top: 0;">Red Flags in This Message:</h3>
+                    <ol>
+                        <li><strong>Suspicious link:</strong> "chase-secure.live" isn't Chase's real domain (should be chase.com)</li>
+                        <li><strong>Urgent language:</strong> Designed to panic you into acting without thinking</li>
+                        <li><strong>Request for reply:</strong> Legitimate banks don't verify transactions this way</li>
+                        <li><strong>Generic greeting:</strong> Doesn't use your name despite claiming to be your bank</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Common Scams Card -->
+            <div class="info-card">
+                <h2>Common Smishing Scenarios</h2>
+                <p>Be especially wary of these frequent smishing scams:</p>
+                
+                <h3>1. Bank Fraud Alerts</h3>
+                <p>Messages claiming suspicious activity on your account with a link to "verify" your information.</p>
+                
+                <h3>2. Package Delivery Issues</h3>
+                <p>Texts about undeliverable packages with links to "reschedule delivery" or pay fees.</p>
+                
+                <h3>3. Account Suspension Warnings</h3>
+                <p>Threats that your Netflix/Amazon/PayPal account will be suspended unless you update payment info.</p>
+                
+                <h3>4. COVID-19 Related Scams</h3>
+                <p>Fake contact tracing alerts or vaccine appointment confirmations with malicious links.</p>
+                
+                <h3>5. Prize/Giveaway Scams</h3>
+                <p>Messages claiming you've won a prize but need to pay shipping fees or provide personal details.</p>
+            </div>
+            
+            <!-- Protection Tips Card -->
+            <div class="info-card">
+                <h2>How to Protect Yourself</h2>
+                <p>Follow these guidelines to avoid falling victim to smishing scams:</p>
+                
+                <div class="tip-box">
+                    <h4><i class="fas fa-lightbulb"></i> Safety Tip</h4>
+                    <p>Never click links in unsolicited text messages - even if they appear to come from companies you trust. Always navigate to websites directly through your browser.</p>
+                </div>
+                
+                <h3>Best Practices for SMS Security</h3>
+                <ul>
+                    <li><strong>Verify before responding:</strong> Contact the organization directly using a known phone number or website</li>
+                    <li><strong>Check URLs carefully:</strong> Hover over links (on desktop) or long-press (on mobile) to see the actual destination</li>
+                    <li><strong>Don't reply:</strong> Even texting "STOP" can confirm your number is active to scammers</li>
+                    <li><strong>Enable spam protection:</strong> Use built-in spam filtering on your smartphone</li>
+                    <li><strong>Update regularly:</strong> Keep your phone's OS and messaging apps updated for security patches</li>
+                </ul>
+                
+                <h3>Technical Protections</h3>
+                <ul>
+                    <li>Install a reputable mobile security app with smishing protection</li>
+                    <li>Use different passwords for each online account</li>
+                    <li>Enable two-factor authentication (but not via SMS when possible)</li>
+                    <li>Regularly review your bank and credit card statements</li>
+                </ul>
+                
+                <div class="tip-box">
+                    <h4><i class="fas fa-lightbulb"></i> Verification Tip</h4>
+                    <p>If unsure about a message, search online for the exact wording - most scams use templates that others have reported.</p>
+                </div>
+            </div>
+            
+            <!-- What to Do If Scammed Card -->
+            <div class="info-card">
+                <h2>What to Do If You Responded to Smishing</h2>
+                <p>If you clicked a link or shared information:</p>
+                <ol>
+                    <li><strong>Disconnect your device</strong> from WiFi and mobile data immediately</li>
+                    <li><strong>Change passwords</strong> for any accounts you accessed</li>
+                    <li><strong>Contact financial institutions</strong> if you entered payment details</li>
+                    <li><strong>Run antivirus scans</strong> if you downloaded anything</li>
+                    <li><strong>Forward the message</strong> to 7726 (SPAM) to report it to your carrier</li>
+                    <li><strong>File a report</strong> with the FTC at ReportFraud.ftc.gov</li>
+                </ol>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="action-btn"><i class="fas fa-home"></i> Back to Home</a>
+                <a href="section3assessment.html" class="action-btn"><i class="fas fa-shield-alt"></i> Take Smishing Test</a>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer>
+        <!--Privacy Policy Button-->
+        <a href="privacypolicy.html" class="footer-btn"><i class="fas fa-lock"></i> Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js">
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(event.target) && 
+                event.target !== mobileMenuBtn) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

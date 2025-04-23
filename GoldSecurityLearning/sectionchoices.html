@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldSecurity Learning - Choose Your Learning Path</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-header h1 {
+            color: #E67E22;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .section-cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid #FFE0B2;
+            text-align: left;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(230, 126, 34, 0.2);
+            border-color: #FFA500;
+        }
+        
+        .section-card-image {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .section-card-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+        }
+        
+        .section-card-content {
+            padding: 25px;
+        }
+        
+        .section-card h3 {
+            color: #E67E22;
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .section-card-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFA500, #E67E22);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .section-card-btn:hover {
+            background: linear-gradient(135deg, #E67E22, #D35400);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+        }
+        
+        .section-card-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.9);
+            color: #E67E22;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section-card-duration {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        .phishing-image {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');
+        }
+        
+        .vishing-image {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1587560699334-bea93391dcef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');
+        }
+        
+        .smishing-image {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');
+        }
+        
+        .fakeads-image {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with website title and navigation -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons" id="userSection">
+            <!-- Table of Contents Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <!-- About Button -->
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <!-- Sign In and Register Buttons -->
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <!-- Mobile Menu-->
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-frame">
+        <div class="section-header">
+            <h1>Choose Your Learning Path</h1>
+            <p>Select a topic below to start learning about different types of online scams and how to protect yourself. Each section includes easy-to-understand information and a short test to check your knowledge.</p>
+        </div>
+        
+        <div class="section-cards-container">
+            <!-- Phishing Card -->
+            <div class="section-card">
+                <div class="section-card-image phishing-image">
+                    <span class="section-card-badge">Most Common</span>
+                    <span class="section-card-duration"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+                <div class="section-card-content">
+                    <h3>Phishing</h3>
+                    <p>Learn to identify fake emails pretending to be from legitimate companies, designed to steal your personal information.</p>
+                    <a href="section1.html" class="section-card-btn">Start Learning</a>
+                    <a href="section1assessment.html" class="section-card-btn" style="background: #666; margin-left: 10px;">Take Test</a>
+                </div>
+            </div>
+            
+            <!-- Vishing Card -->
+            <div class="section-card">
+                <div class="section-card-image vishing-image">
+                    <span class="section-card-duration"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+                <div class="section-card-content">
+                    <h3>Vishing</h3>
+                    <p>Discover how scammers use phone calls to trick you into revealing sensitive information or sending money.</p>
+                    <a href="section2.html" class="section-card-btn">Start Learning</a>
+                    <a href="section2assessment.html" class="section-card-btn" style="background: #666; margin-left: 10px;">Take Test</a>
+                </div>
+            </div>
+            
+            <!-- Smishing Card -->
+            <div class="section-card">
+                <div class="section-card-image smishing-image">
+                    <span class="section-card-badge">New Threat</span>
+                    <span class="section-card-duration"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+                <div class="section-card-content">
+                    <h3>Smishing</h3>
+                    <p>Understand how text messages can be used to steal your information or install malware on your device.</p>
+                    <a href="section3.html" class="section-card-btn">Start Learning</a>
+                    <a href="section3assessment.html" class="section-card-btn" style="background: #666; margin-left: 10px;">Take Test</a>
+                </div>
+            </div>
+            
+            <!-- Fake Ads Card -->
+            <div class="section-card">
+                <div class="section-card-image fakeads-image">
+                    <span class="section-card-duration"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+                <div class="section-card-content">
+                    <h3>Fake Ads</h3>
+                    <p>Recognize misleading online advertisements that may lead to scams or malicious websites.</p>
+                    <a href="section4.html" class="section-card-btn">Start Learning</a>
+                    <a href="section4assessment.html" class="section-card-btn" style="background: #666; margin-left: 10px;">Take Test</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <!--Privacy Policy Button-->
+        <a href="privacypolicy.html" class="footer-btn"><i class="fas fa-lock"></i> Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js">
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(event.target) && 
+                event.target !== mobileMenuBtn) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

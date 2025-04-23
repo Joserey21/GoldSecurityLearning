@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smishing Quiz - GoldSecurity Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons" id="userSection">
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+
+    <!-- Quiz Content -->
+    <div class="main-frame">
+        <div class="quiz-container">
+            <h1 class="quiz-title"><i class="fas fa-sms"></i> Smishing Quiz</h1>
+            <div class="quiz-progress">Question 1 of 5 | Score: 0/5</div>
+            
+<!-- Question 1 -->
+<div class="question-card active" data-correct="b">
+    <div class="question-text">1. Someone messages you saying you won a lottery you never entered and must pay a "fee" to claim your prize. What should you do?</div>
+    <div class="answer-option" data-option="a">
+        Pay the fee to receive the prize
+        <div class="answer-explanation"> This is a classic scam - legitimate prizes don't require upfront fees.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        Ignore or delete the message
+        <div class="answer-explanation">Correct! Never engage with prize scams - delete them immediately.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        Share the news on social media
+        <div class="answer-explanation"> This spreads awareness of the scam but doesn't protect you.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        Reply asking how to claim the prize
+        <div class="answer-explanation"> Any response confirms your number is active to scammers.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i>  Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 2 -->
+<div class="question-card" data-correct="b">
+    <div class="question-text">2. Someone claiming to be your grandchild texts you asking for money urgently. What should you do?</div>
+    <div class="answer-option" data-option="a">
+        Send the money immediately
+        <div class="answer-explanation"> Never send money without verifying the story first.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        Call your grandchild or another family member to verify the story
+        <div class="answer-explanation">Correct! Always verify emergency situations through known contacts.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        Ask for their bank account details
+        <div class="answer-explanation"> This engages with the scammer and provides them information.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        Reply to confirm their identity
+        <div class="answer-explanation"> Scammers can fake identities - call directly instead.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i>  Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 3 -->
+<div class="question-card" data-correct="b">
+    <div class="question-text">3. Your bank sends you a text message saying: "Suspicious activity detected. Click here to verify your account." What should you do?</div>
+    <div class="answer-option" data-option="a">
+        Click the link
+        <div class="answer-explanation"> The link could lead to a fake login page.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        Call your bank using the number on your bank card
+        <div class="answer-explanation">Correct! Always use official contact methods to verify alerts.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        Reply with your bank details
+        <div class="answer-explanation"> Never share sensitive information via text.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        Ignore the message
+        <div class="answer-explanation"> While it might be fake, you should verify through proper channels.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i>  Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 4 -->
+<div class="question-card" data-correct="b">
+    <div class="question-text">4. What does "smishing" refer to?</div>
+    <div class="answer-option" data-option="a">
+        A phishing scam using fake phone calls
+        <div class="answer-explanation"> That describes vishing, not smishing.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        A phishing scam using text messages
+        <div class="answer-explanation">Correct! Smishing = SMS + phishing.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        A new social media trend
+        <div class="answer-explanation"> Smishing specifically involves text messages.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        A secure way to send SMS
+        <div class="answer-explanation"> Smishing is a threat, not a security measure.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i>  Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 5 -->
+<div class="question-card" data-correct="c">
+    <div class="question-text">5. Which of these is NOT a red flag for smishing?</div>
+    <div class="answer-option" data-option="a">
+        The message creates a sense of urgency
+        <div class="answer-explanation"> Urgency is a common smishing tactic.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        The sender uses a shortened URL
+        <div class="answer-explanation">Shortened URLs hide malicious links.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        The message comes during business hours
+        <div class="answer-explanation">Correct! Timing alone doesn't indicate a smishing attempt.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        The message requests personal information
+        <div class="answer-explanation"> Legitimate organizations don't ask for sensitive info via text.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i>  Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+            <!-- Quiz Feedback -->
+            <div class="quiz-feedback pass">
+                <h3><i class="fas fa-check-circle"></i> Congratulations!</h3>
+                <p>You scored <span id="final-score">0</span>/5! You've successfully completed this quiz.</p>
+                <p>Your progress has been updated.</p>
+                <a href="index.html" class="action-btn" style="margin-top: 15px;"><i class="fas fa-home"></i> Return to Home</a>
+            </div>
+            
+            <div class="quiz-feedback fail">
+                <h3><i class="fas fa-times-circle"></i> Try Again</h3>
+                <p>You scored <span id="final-score-fail">0</span>/5. Please review the explanations and try again.</p>
+                <a href="section3.html" class="action-btn" style="margin-top: 15px;"><i class="fas fa-book"></i> Review Smishing Info</a>
+                <button id="retryQuiz" class="action-btn" style="margin-top: 15px;"><i class="fas fa-redo"></i> Retry Quiz</button>
+            </div>
+            
+            <div class="quiz-navigation">
+                <button id="prevQuestion" class="quiz-btn" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+                <button id="nextQuestion" class="quiz-btn">Next <i class="fas fa-arrow-right"></i></button>
+                <button id="showResults" class="quiz-btn" style="display: none;"><i class="fas fa-chart-bar"></i> View Results</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="privacypolicy.html" class="footer-btn"><i class="fas fa-lock"></i> Privacy Policy</a>
+    </footer>
+    
+    <script src = script.js>
+
+    </script>
+<script>// Mobile menu emergency fix
+    document.getElementById('mobileMenuBtn')?.addEventListener('click', function(e) {
+        e.stopPropagation();
+        document.getElementById('mobileMenu').classList.toggle('active');
+    });
+    
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+        const menu = document.getElementById('mobileMenu');
+        const btn = document.getElementById('mobileMenuBtn');
+        if (menu?.classList.contains('active') && !menu.contains(e.target) && e.target !== btn) {
+            menu.classList.remove('active');
+        }
+    });
+    </script>
+    
+    
+</body>
+</html>

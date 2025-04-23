@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - GoldSecurity Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Sign-in specific styles */
+        .signin-container {
+            max-width: 500px;
+            margin: 120px auto 0;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #FFE0B2;
+        }
+
+        .signin-container form {
+            padding: 0 20px;
+        }
+
+        input[type="text"], 
+        input[type="password"] {
+            width: calc(100% - 30px);
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #FFE0B2;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #E67E22;
+            box-shadow: 0 0 8px rgba(230, 126, 34, 0.3);
+            outline: none;
+        }
+
+        .signin-btn {
+            background: linear-gradient(135deg, #FFA500, #E67E22);
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(230, 126, 34, 0.3);
+        }
+
+        .signin-btn:hover {
+            background: linear-gradient(135deg, #E67E22, #D35400);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(230, 126, 34, 0.4);
+        }
+
+        .bottom-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .bottom-links a {
+            color: #E67E22;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .bottom-links a:hover {
+            color: #D35400;
+            text-decoration: underline;
+        }
+
+        @media(max-width: 768px){
+            .signin-container {
+                margin: 100px 20px 0;
+                padding: 20px 15px;
+            }
+            
+            input[type="text"], 
+            input[type="password"] {
+                width: calc(100% - 20px);
+                padding: 12px;
+            }
+            
+            .signin-btn {
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with website title and navigation -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons" id="userSection">
+            <!-- Table of Contents Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <!-- About Button -->
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <!-- Register Button -->
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    </div>
+
+    <!-- Sign-in Form -->
+    <div class="signin-container">
+        <h2>Sign In</h2>
+        <form id="signinForm" action="#" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="signin-btn">Sign In</button>
+        </form>
+
+        <div class="bottom-links">
+            <a href="forgotpassword.html">Forgot Password?</a>
+            <a href="register.html">Create Account</a>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <a href="privacypolicy.html" class="footer-btn">Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

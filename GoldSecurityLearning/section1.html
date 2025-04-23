@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldSecurity Learning - Phishing Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+        
+        /* Content container */
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 0 20px;
+        }
+        
+        /* Section header */
+        .section-title {
+            color: #E67E22;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        
+        /* Info cards */
+        .info-card {
+            background: #FFF8E7;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 5px solid #FFA500;
+        }
+        
+        .info-card h3 {
+            color: #D35400;
+            margin-top: 0;
+        }
+        
+        /* Example boxes */
+        .example-box {
+            background: white;
+            border: 1px solid #FFE0B2;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .example-box.warning {
+            border-left: 4px solid #E74C3C;
+        }
+        
+        /* Tip boxes */
+        .tip-box {
+            background: #E8F8F5;
+            border-left: 5px solid #2ECC71;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        
+        /* Call transcript styling */
+        .call-transcript {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: monospace;
+        }
+        
+        .caller {
+            color: #E74C3C;
+            font-weight: bold;
+        }
+        
+        .you {
+            color: #2ECC71;
+            font-weight: bold;
+        }
+        
+        .call-note {
+            font-style: italic;
+            color: #7F8C8D;
+            margin: 5px 0 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons" id="userSection">
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-frame">
+        <div class="section-content">
+            <h1 class="section-title"><i class="fas fa-envelope"></i> Phishing Information</h1>
+            
+            <!-- Introduction Card -->
+            <div class="info-card">
+                <h2>What is Phishing?</h2>
+                <p>Phishing is a type of online scam where criminals send fake emails pretending to be from legitimate companies to steal your personal information. They try to steal information such as:</p>
+                <ul>
+                    <li>Login Credentials (bank accounts, social media) </li>
+                    <li>Credit card numbers</li>
+                    <li>Social Security numbers</li>
+                    <li>Other personal data</li>
+                </ul>
+            </div>
+            
+             <!-- How It Works Card -->
+             <div class="info-card">
+                <h2>How Phishing Works</h2>
+                <p>Scammers create emails that look like they're from real organizations (banks, government, etc.), they use different manipulation tactics, for example, saying that urgent action is required, to trick you into:</p>
+                <ul>
+                    <li>Clicking malicious links</li>
+                    <li>Downloading infected attachments</li>
+                    <li>Entering login credentials on fake websites</li>
+                </ul>
+            </div>
+            
+            <!-- Example Box -->
+              <div class="example-box warning">
+                <h3><i class="fas fa-exclamation-triangle"></i> Example of a Phishing Email</h3>
+                <p>Here's what a typical phishing email might look like:</p>
+               
+                <div class="phishing-example" style="border: 1px solid #ccc; padding: 20px; max-width: 600px; margin: 20px auto; font-family: Arial; background: #f9f9f9;">
+                    <div style="border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 15px;">
+                        <span style="color: #777;">From: </span> 
+                        <strong>Amazon Customer Service &lt;support@amaz0n-update.com&gt;</strong>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <span style="color: #777;">Subject: </span>
+                        <strong>URGENT: Your account will be suspended</strong>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <p>Dear Valued Customer,</p>
+                        <p>We've detected unusual activity on your Amazon account. To prevent suspension, please verify your account immediately:</p>
+                        <a href="#" style="display: inline-block; background: #FF9900; color: white; padding: 10px 15px; text-decoration: none; border-radius: 3px; margin: 10px 0;">Verify Account Now</a>
+                        <p>If you don't take action within 24 hours, your account will be permanently closed.</p>
+                        <p style="font-size: 0.9em; color: #777;">Amazon Customer Service Team</p>
+                    </div>
+                </div>
+                
+                <div class="phishing-red-flags" style="background: #FFF8E7; padding: 15px; border-left: 4px solid #E67E22; margin: 20px auto; max-width: 600px;">
+                    <h3 style="color: #D35400; margin-top: 0;">Red Flags in This Email:</h3>
+                    <ol>
+                        <li><strong>Suspicious sender address:</strong> "amaz0n-update.com" instead of "amazon.com"</li>
+                        <li><strong>Urgent/threatening language:</strong> Creates false urgency to bypass your caution</li>
+                        <li><strong>Generic greeting:</strong> Uses "Valued Customer" instead of your name</li>
+                        <li><strong>Requests sensitive info:</strong> Legitimate companies never ask for credentials via email</li>
+                    </ol>
+                </div>
+            </div>
+            
+           
+            <!-- Protection Tips Card -->
+            <div class="info-card">
+                <h2>How to Protect Yourself</h2>
+                <p>It is good practice to never share sensitive info via email, legitimate companies wouldn't ask for passwords, SSN's, or credit card information in this manner.</p>
+                <p>You should always look for misspellings or strange domains (@amaz0n.com instead of @amazon.com). Before clicking on any link you should always hover over it to check the actual URL of the link.</p>
+                <p>If you are unsure then you should contact the organization directly using their official phone number, website, or email.</p>
+                <p>You can install tools on your devices that can detect and block malicious links or warn you so you don't fall victim to one of these attacks. Reporting these phishing emails to the impersonated company can help save other people from falling to the same scam.</p>
+
+                <div class="tip-box">
+                    <h4><i class="fas fa-lightbulb"></i> Safety Tips</h4>
+                    <li>Always check the sender's email address carefully - not just the display name.</li>
+                    <li>You should never have the same password across multiple sites, if one account is hacked, all accounts can be hacked too. </li>
+                </div>
+                
+            </div>
+            
+            <!-- What to Do If Scammed -->
+            <div class="info-card">
+            <h2>What to Do If You Fell for a Phishing Scam</h2>
+            <p>If you suspect you've responded to a phishing email or entered information on a fake website, take these immediate actions:</p>
+            
+            <h3>1. Change Compromised Passwords</h3>
+            <ul>
+                <li>Immediately change the password for any account you entered credentials for</li>
+                <li>Use a <strong>new, strong password</strong> that you haven't used elsewhere</li>
+                <li>Enable two-factor authentication if available</li>
+            </ul>
+            
+            <h3>2. Financial Accounts</h3>
+            <ul>
+                <li>Contact your bank or credit card company if you entered financial information</li>
+                <li>Monitor accounts for unauthorized transactions</li>
+                <li>Request new cards if credit card numbers were compromised</li>
+            </ul>
+            
+            <h3>3. Scan for Malware</h3>
+            <ul>
+                <li>Run antivirus scans if you downloaded attachments or clicked links</li>
+                <li>Update your security software and operating system</li>
+                <li>Consider wiping and restoring your device if serious infection is suspected</li>
+            </ul>
+            
+            <h3>4. Report the Phishing</h3>
+            <ul>
+                <li>Forward the phishing email to reportphishing@apwg.org (Anti-Phishing Working Group)</li>
+                <li>Report to the impersonated organization (e.g., forward to reportphish@amazon.com if pretending to be Amazon)</li>
+                <li>File a report with the FTC at ReportFraud.ftc.gov</li>
+            </ul>
+            
+            <h3>5. Identity Theft Protection</h3>
+            <ul>
+                <li>Place a fraud alert with credit bureaus if personal information was shared</li>
+                <li>Consider freezing your credit to prevent new accounts being opened</li>
+                <li>Monitor your credit reports for suspicious activity</li>
+            </ul>
+        </div>
+            <!-- Navigation Buttons -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="action-btn"><i class="fas fa-home"></i> Back to Home</a>
+                <a href="section1assessment.html" class="action-btn"><i class="fas fa-shield-alt"></i> Take Phishing Test</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="privacypolicy.html" class="footer-btn"><i class="fas fa-lock"></i> Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js">
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(event.target) && 
+                event.target !== mobileMenuBtn) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

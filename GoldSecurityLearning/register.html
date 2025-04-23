@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - GoldSecurity Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Only register-specific styles here */
+        .register-container {
+            max-width: 500px;
+            margin: 120px auto 0;
+            background: white;
+            padding: 60px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #FFE0B2;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"] {
+            width: 100% - 30px;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #FFE0B2;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #E67E22;
+            box-shadow: 0 0 8px rgba(230, 126, 34, 0.3);
+            outline: none;
+        }
+
+        .register-btn {
+            background: linear-gradient(135deg, #FFA500, #E67E22);
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(230, 126, 34, 0.3);
+        }
+
+        .register-btn:hover {
+            background: linear-gradient(135deg, #E67E22, #D35400);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(230, 126, 34, 0.4);
+        }
+
+        .bottom-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .bottom-links a {
+            color: #E67E22;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .bottom-links a:hover {
+            color: #D35400;
+            text-decoration: underline;
+        }
+
+        @media(max-width: 768px){
+            .register-container {
+                margin: 100px 20px 0;
+                padding: 20px;
+            }
+            
+            input[type="text"], 
+            input[type="email"], 
+            input[type="password"] {
+                padding: 12px;
+            }
+            
+            .register-btn {
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+    </style>
+  
+</head>
+<body>
+
+    <!-- Header --->
+     <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        
+    
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <div class="nav-buttons" id="userSection">
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                   
+                </div>
+            </div>
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    </div>
+
+    <!-- Registration Form -->
+   
+    <div class="register-container">
+        <h2>Create an Account</h2>
+        <form id="registerForm" action="#" method="POST">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <p class="password-requirements">Password must contain at least 1 capital letter and 1 number</p>
+            <p id="passwordError" class="error-message"></p>
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+        <div class="bottom-links">
+            <a href="signin.html">Already have an account? Sign In</a>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <a href="privacypolicy.html" class="footer-btn">Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js"></script> 
+</html>

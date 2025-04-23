@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fake Ads Quiz - GoldSecurity Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons" id="userSection">
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+
+    <!-- Quiz Content -->
+    <div class="main-frame">
+        <div class="quiz-container">
+            <h1 class="quiz-title"><i class="fas fa-ad"></i> Fake Ads Quiz</h1>
+            <div class="quiz-progress">Question 1 of 5 | Score: 0/5</div>
+            
+           <!-- Question 1 -->
+<div class="question-card active" data-correct="a">
+    <div class="question-text">1. Why is it dangerous to click on pop-up ads?</div>
+    <div class="answer-option" data-option="a">
+        They might contain malware
+        <div class="answer-explanation">Correct! Malicious pop-ups can install harmful software without your knowledge.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        They close your browser
+        <div class="answer-explanation">While annoying, browser closures are not the primary danger of pop-up ads.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        They offer great deals
+        <div class="answer-explanation">The deals are often fake, but this isn't the main security risk.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        They speed up your computer
+        <div class="answer-explanation">Pop-up ads typically slow down devices rather than speed them up.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i> Incorrect. Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 2 -->
+<div class="question-card" data-correct="b">
+    <div class="question-text">2. You see an ad on social media offering a brand-new phone at a very low price. What should you do?</div>
+    <div class="answer-option" data-option="a">
+        Buy the phone immediately before it sells out
+        <div class="answer-explanation">Impulse purchases from unknown sellers often lead to scams or receiving counterfeit goods.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        Research the store and read reviews before purchasing
+        <div class="answer-explanation">Correct! Verifying the seller's legitimacy is crucial when deals seem too good to be true.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        Share the link with your friends
+        <div class="answer-explanation">Sharing unverified deals might expose others to potential scams.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        Enter your bank details and wait for delivery
+        <div class="answer-explanation">Never provide payment information without verifying the seller's authenticity first.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i> Incorrect. Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 3 -->
+<div class="question-card" data-correct="c">
+    <div class="question-text">3. What's the most reliable way to identify a fake celebrity endorsement in an ad?</div>
+    <div class="answer-option" data-option="a">
+        The celebrity's image looks slightly blurred
+        <div class="answer-explanation">While sometimes true, high-quality fake ads can use clear images.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        The product seems unrelated to the celebrity
+        <div class="answer-explanation">Celebrities sometimes endorse unexpected products, so this isn't definitive.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        Check the celebrity's official social media for confirmation
+        <div class="answer-explanation">Correct! Official channels provide the most reliable verification.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        The ad appears on smaller websites only
+        <div class="answer-explanation">Fake celebrity endorsements can appear anywhere, including major platforms.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i> Incorrect. Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 4 -->
+<div class="question-card" data-correct="d">
+    <div class="question-text">4. Which payment method is safest when concerned about fake ads?</div>
+    <div class="answer-option" data-option="a">
+        Bank transfer
+        <div class="answer-explanation">Transfers offer little recourse if the product never arrives.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        Cryptocurrency
+        <div class="answer-explanation">Crypto payments are irreversible and favored by scammers.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        Gift cards
+        <div class="answer-explanation">Legitimate businesses don't ask for gift cards as payment.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        Credit card through secure payment processors
+        <div class="answer-explanation">Correct! Credit cards often provide fraud protection and chargeback options.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i> Incorrect. Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 5 -->
+<div class="question-card" data-correct="a">
+    <div class="question-text">5. What should you do if you accidentally clicked a suspicious ad?</div>
+    <div class="answer-option" data-option="a">
+        Close the page immediately and run antivirus software
+        <div class="answer-explanation">Correct! Quick action can prevent malware installation or data theft.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        Continue browsing to see where it leads
+        <div class="answer-explanation">Further interaction increases your risk of malware or scams.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        Enter dummy information to confuse scammers
+        <div class="answer-explanation">Any interaction with scam sites puts you at risk.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        Take screenshots for future reference
+        <div class="answer-explanation">While documentation helps, security actions should come first.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i> Incorrect. Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+            
+            <!-- Quiz Feedback -->
+            <div class="quiz-feedback pass">
+                <h3><i class="fas fa-check-circle"></i> Congratulations!</h3>
+                <p>You scored <span id="final-score">0</span>/5! You've successfully completed this quiz.</p>
+                <p>Your progress has been updated.</p>
+                <a href="index.html" class="action-btn" style="margin-top: 15px;"><i class="fas fa-home"></i> Return to Home</a>
+            </div>
+            
+            <div class="quiz-feedback fail">
+                <h3><i class="fas fa-times-circle"></i> Try Again</h3>
+                <p>You scored <span id="final-score-fail">0</span>/5. Please review the explanations and try again.</p>
+                <a href="section4.html" class="action-btn" style="margin-top: 15px;"><i class="fas fa-book"></i> Review Fake Ads Info</a>
+                <button id="retryQuiz" class="action-btn" style="margin-top: 15px;"><i class="fas fa-redo"></i> Retry Quiz</button>
+            </div>
+            
+            <div class="quiz-navigation">
+                <button id="prevQuestion" class="quiz-btn" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+                <button id="nextQuestion" class="quiz-btn">Next <i class="fas fa-arrow-right"></i></button>
+                <button id="showResults" class="quiz-btn" style="display: none;"><i class="fas fa-chart-bar"></i> View Results</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="privacypolicy.html" class="footer-btn"><i class="fas fa-lock"></i> Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js">
+    
+    </script>
+    <script>
+        // Mobile menu 
+document.getElementById('mobileMenuBtn')?.addEventListener('click', function(e) {
+    e.stopPropagation();
+    document.getElementById('mobileMenu').classList.toggle('active');
+});
+
+// Close when clicking outside
+document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.getElementById('mobileMenuBtn');
+    if (menu?.classList.contains('active') && !menu.contains(e.target) && e.target !== btn) {
+        menu.classList.remove('active');
+    }
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldSecurity Learning - Cybersecurity Senior Guide</title>
+    <link rel = "stylesheet" href=" styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+      
+    
+</head>
+<style>
+   
+body.index, 
+body.section1 {
+    position: relative; 
+    min-height: 100vh; 
+    padding-bottom: 60px; 
+}
+
+body.index footer,
+body.section1 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set your footer's exact height */
+}
+</style>
+<body>
+    <!-- Welcome Modal -->
+    <div class="welcome-modal" id="welcomeModal">
+        <div class="welcome-modal-content">
+            <div class="welcome-modal-header">
+                <h2>Welcome to GoldSecurity Learning!</h2>
+            </div>
+            <div class="welcome-modal-body">
+                <div class="welcome-modal-image"></div>
+                <p>Join our community to learn how to protect yourself from online threats</p>
+                <div class="welcome-modal-options">
+                    <button class="welcome-modal-btn signin" id="signInBtn">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </button>
+                    <button class="welcome-modal-btn register" id="registerBtn">
+                        <i class="fas fa-user-plus"></i> Register
+                    </button>
+                    <button class="welcome-modal-btn guest" id="guestBtn">
+                        <i class="fas fa-user"></i> Continue as Guest
+                    </button>
+                </div>
+            </div>
+            <div class="welcome-modal-footer">
+                By continuing, you agree to our <a href="privacypolicy.html" style="color: #E67E22;">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons" id="userSection">
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+     <!-- Mobile Menu  -->
+     <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+
+
+   
+    <div class="main-frame">
+        <div class="welcome-section">
+            <h2>Protect Yourself Online</h2>
+            <p>Learn to recognize digital threats and test your knowledge with our simple, senior-friendly guides</p>
+            
+            <div class="progress-container">
+                <div class="progress-bar">0% Complete</div>
+            </div>
+                <div class="button-container" style="position: relative; z-index: 10;">
+                    <a href="sectionchoices.html" class="action-btn" onclick="console.log('HTML click handler')">
+                        <i class="fas fa-book-open"></i> Start Learning
+                    </a>
+                    <a href="sectionchoices.html" class="action-btn" onclick="console.log('HTML click handler')">
+                        <i class="fas fa-shield-alt"></i> Take a Test
+                    </a>
+                </div>
+            
+        <div class="course-stats">
+            <h3><i class="fas fa-chart-line"></i> Course Overview</h3>
+            <div class="stat-item">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Learning Sections</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20</div>
+                <div class="stat-label">Total Questions</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Practical Skills</div>
+            </div>
+        </div>
+        <div class="learning-path">
+            <h3>How It Works:</h3>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Learn About Online Threats</h4>
+                    <p>Read our simple guides about different types of scams</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Test Your Knowledge</h4>
+                    <p>Take short quizzes to practice what you've learned</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Become Cyber-Safe</h4>
+                    <p>Gain confidence in spotting and avoiding scams</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Phishing</h3>
+                <p>Learn to spot fake emails trying to steal your information.</p>
+                <a href="section1.html" class="action-btn" style="padding: 0.5rem 0.9375rem; font-size: 0.875rem; margin: 0.625rem 0 0 0;">Learn More</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3>Vishing</h3>
+                <p>Recognize scam phone calls and protect yourself.</p>
+                <a href="section2.html" class="action-btn" style="padding: 0.5rem 0.9375rem; font-size: 0.875rem; margin: 0.625rem 0 0 0;">Learn More</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-sms"></i>
+                </div>
+                <h3>Smishing</h3>
+                <p>Identify dangerous text messages before they cause harm.</p>
+                <a href="section3.html" class="action-btn" style="padding: 0.5rem 0.9375rem; font-size: 0.875rem; margin: 0.625rem 0 0 0;">Learn More</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-ad"></i>
+                </div>
+                <h3>Fake Ads</h3>
+                <p>Spot misleading online advertisements and avoid traps.</p>
+                <a href="section4.html" class="action-btn" style="padding: 0.5rem 0.9375rem; font-size: 0.875rem; margin: 0.625rem 0 0 0;">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--Footer-->
+    <footer>
+        <!--Privacy Policy Button-->
+        <a href="privacypolicy.html" class="footer-btn"><i class="fas fa-lock"></i> Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js">
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(event.target) && 
+                event.target !== mobileMenuBtn) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

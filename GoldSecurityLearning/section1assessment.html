@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Quiz - GoldSecurity Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* QUIZ-SPECIFIC STYLES */
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 20px;
+        }
+        
+        .quiz-title {
+            color: #E67E22;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .question-card {
+            background: #FFF8E7;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 5px solid #FFA500;
+            display: none;
+        }
+        
+        .question-card.active {
+            display: block;
+        }
+        
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #D35400;
+        }
+        
+        .answer-option {
+            background: white;
+            border: 1px solid #FFE0B2;
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .answer-option:hover {
+            background: #FFE0B2;
+        }
+        
+        .answer-option.selected {
+            background: #FFD700;
+            border-color: #E67E22;
+        }
+        
+        .answer-option.correct {
+            background: #2ECC71;
+            color: white;
+            border-color: #27AE60;
+        }
+        
+        .answer-option.incorrect {
+            background: #E74C3C;
+            color: white;
+            border-color: #C0392B;
+        }
+        
+        .answer-explanation {
+            display: none;
+            padding: 10px;
+            margin-top: 10px;
+            background: rgba(255,255,255,0.7);
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+            font-size: 0.9em;
+        }
+        
+        .question-feedback {
+            display: none;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .question-feedback.correct {
+            background: #E8F8F5;
+            border-left: 5px solid #2ECC71;
+            color: #27AE60;
+        }
+        
+        .question-feedback.incorrect {
+            background: #FDEDEC;
+            border-left: 5px solid #E74C3C;
+            color: #C0392B;
+        }
+        
+        .quiz-progress {
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .quiz-feedback {
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        .quiz-feedback.pass {
+            background: #E8F8F5;
+            border-left: 5px solid #2ECC71;
+        }
+        
+        .quiz-feedback.fail {
+            background: #FDEDEC;
+            border-left: 5px solid #E74C3C;
+        }
+        
+        .quiz-navigation {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .quiz-btn {
+            background: linear-gradient(135deg, #FFA500, #E67E22);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        
+        .quiz-btn:hover {
+            background: linear-gradient(135deg, #E67E22, #D35400);
+        }
+        
+        .question-submit-btn {
+            display: none;
+            margin-top: 15px;
+        }
+        
+        .question-submit-btn.active {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="site-title">
+            <span class="gold-text">Gold</span>
+            <span class="security-text">Security</span>
+            <span class="learning-text">Learning</span>
+        </a>
+        <div class="accessibility-controls">
+            <button id="fontDecrease" aria-label="Decrease font size">A-</button>
+            <button id="fontReset" aria-label="Reset font size">A</button>
+            <button id="fontIncrease" aria-label="Increase font size">A+</button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="nav-buttons" id="userSection">
+            <div class="dropdown">
+                <button class="dropdown-btn"><i class="fas fa-shield-alt"></i> Learn & Test</button>
+                <div class="dropdown-content">
+                    <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+                    <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+                    <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+                    <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+                    <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+                    <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+                    <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+                    <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+                </div>
+            </div>
+            <a href="about.html" class="nav-btn"><i class="fas fa-info-circle"></i> About</a>
+            <a href="signin.html" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" id="mobileUserSection">
+        <a href="section1.html"><i class="fas fa-envelope"></i> Phishing Info</a>
+        <a href="section1assessment.html"><i class="fas fa-question-circle"></i> Phishing Test</a>
+        <a href="section2.html"><i class="fas fa-phone"></i> Vishing Info</a>
+        <a href="section2assessment.html"><i class="fas fa-question-circle"></i> Vishing Test</a>
+        <a href="section3.html"><i class="fas fa-sms"></i> Smishing Info</a>
+        <a href="section3assessment.html"><i class="fas fa-question-circle"></i> Smishing Test</a>
+        <a href="section4.html"><i class="fas fa-ad"></i> Fake Ads Info</a>
+        <a href="section4assessment.html"><i class="fas fa-question-circle"></i> Fake Ads Test</a>
+        <hr>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+
+    <!-- Quiz Content -->
+    <div class="main-frame">
+        <div class="quiz-container">
+            <h1 class="quiz-title"><i class="fas fa-question-circle"></i> Phishing Quiz</h1>
+            <div class="quiz-progress">Question 1 of 5 | Score: 0/5</div>
+            
+            <!-- Question 1 -->
+            <div class="question-card active" data-correct="b">
+                <div class="question-text">1. What does a "phishing email" try to do? </div>
+                <div class="answer-option" data-option="a">
+                    Teach you how to fish
+                    <div class="answer-explanation">Phishing is a cyber threat, not a fishing lesson—the name is wordplay.</div>
+                </div>
+                <div class="answer-option" data-option="b">
+                   Trick you into sharing personal or financial information
+                    <div class="answer-explanation">Correct! Phishing emails impersonate trusted entities to steal sensitive data.</div>
+                </div>
+                <div class="answer-option" data-option="c">
+                    Help you recover your lost password
+                    <div class="answer-explanation">Legitimate companies never ask for passwords via email; this is a scam tactic.</div>
+                </div>
+                <div class="answer-option" data-option="d">
+                    Fix problems with your bank account automatically 
+                    <div class="answer-explanation">Banks require verification for account changes—they won't "auto-fix" via email.</div>
+                </div>
+                <div class="question-feedback correct">
+                    <i class="fas fa-check-circle"></i> Correct! Well done.
+                </div>
+                <div class="question-feedback incorrect">
+                    <i class="fas fa-times-circle"></i>  Here's why your answer was wrong:
+                </div>
+                <button class="quiz-btn question-submit-btn">Submit Answer</button>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question-card" data-correct="a">
+                <div class="question-text">2. You receive an email from "Amazon" asking you to verify your account. What should you do?</div>
+                <div class="answer-option" data-option="a">
+                    Check the sender's email adress and go to Amazon's official website 
+                    <div class="answer-explanation">Correct! Always verify suspicious emails by manually typing Amazon's URL - never use links in unsolicited messages.</div>
+                </div>
+                <div class="answer-option" data-option="b">
+                    Click the link immediately
+                    <div class="answer-explanation">Phishing links steal login details - legitimate companies never ask for urgent verification via email.</div>
+                </div>
+                <div class="answer-option" data-option="c">
+                    Reply with your personal details
+                    <div class="answer-explanation">Amazon will never request sensitive information via email reply - this is a scammer's tactic.</div>
+                </div>
+                <div class="answer-option" data-option="d">
+                    Ignore all Amazon emails
+                    <div class="answer-explanation">While caution is good, some legitimate Amazon emails (e.g., order confirmations) require attention - learn to spot fakes instead.</div>
+                </div>
+                <div class="question-feedback correct">
+                    <i class="fas fa-check-circle"></i> Correct! Well done.
+                </div>
+                <div class="question-feedback incorrect">
+                    <i class="fas fa-times-circle"></i> Incorrect. Here's why your answer was wrong:
+                </div>
+                <button class="quiz-btn question-submit-btn">Submit Answer</button>
+            </div>
+            
+            <!-- Question 3  -->
+<div class="question-card" data-correct="b">
+    <div class="question-text">3. Is this a legitimate email?</div>
+    <div class="email-demo" style="font-family: Arial, sans-serif; max-width: 600px; margin: 25px auto; border: 1px solid #e1e1e1; border-radius: 5px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.08);">
+        <!-- Email Header -->
+        <div style="background: #f5f5f5; padding: 12px 15px; border-bottom: 1px solid #ddd; color: #555;">
+            <div style="margin-bottom: 5px;">
+                <strong>From:</strong> Amazon Security &lt;no-reply@amaz0n-security.com&gt;
+            </div>
+            <div style="margin-bottom: 5px;">
+                <strong>To:</strong> customer@example.com
+            </div>
+            <div>
+                <strong>Date:</strong> Today, 11:24 AM
+            </div>
+        </div>
+        
+        <!-- Email Body -->
+        <div style="padding: 20px; background: white;">
+            <h3 style="color: #c45500; margin-top: 0;">Urgent: Your Amazon Account is Locked!</h3>
+            
+            <p>Dear Customer,</p>
+            
+            <p>We've detected unusual login attempts on your Amazon account from a new device in [Unknown Location]. For your security, we've temporarily restricted access to your account.</p>
+            
+            <p style="font-weight: bold; margin: 20px 0 25px 0;">
+                <a href="#" style="color: #0066c0; text-decoration: none;">Click here to verify your identity and unlock your account</a>
+            </p>
+            
+            <p><strong style="color: #b12704;">Important:</strong> If you don't verify within 24 hours, your account will be permanently suspended.</p>
+            
+            <p>Thank you,<br>
+            Amazon Account Team</p>
+            
+            <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee; font-size: 12px; color: #767676;">
+                <p>Amazon.com | 410 Terry Ave N. Seattle, WA 98109</p>
+            </div>
+        </div>
+    </div>
+    <div class="answer-option" data-option="a">
+        Yes it is legitimate
+        <div class="answer-explanation"> The email has a wrong sender domain (should be @amazon.com), uses urgency/threats, and has a suspicious link.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        No it is not legitimate
+        <div class="answer-explanation">Correct! This is a phishing attempt with multiple red flags: fake domain, urgent language, and threats of account suspension.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i> Incorrect. Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 4  -->
+<div class="question-card" data-correct="true">
+    <div class="question-text">4. Is this a legitimate work email?</div>
+    <div class="email-demo" style="font-family: Arial, sans-serif; max-width: 600px; margin: 25px auto; border: 1px solid #e1e1e1; border-radius: 5px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.08);">
+        <!-- Email Header -->
+        <div style="background: #f5f5f5; padding: 12px 15px; border-bottom: 1px solid #ddd; color: #555;">
+            <div style="margin-bottom: 5px;">
+                <strong>From:</strong> HR Team &lt;hr@company.com&gt;
+            </div>
+            <div style="margin-bottom: 5px;">
+                <strong>To:</strong> employee@example.com
+            </div>
+            <div>
+                <strong>Date:</strong> March 15, 2025, 9:30 AM
+            </div>
+        </div>
+        
+        <!-- Email Body -->
+        <div style="padding: 20px; background: white;">
+            <h3 style="color: #333; margin-top: 0;">Meeting Confirmation – March 18, 2025</h3>
+            
+            <p>Hi [User],</p>
+            
+            <p>This is a confirmation for our scheduled team meeting on March 18 at 10:00 AM (EST) via Zoom.</p>
+            
+            <p style="font-weight: bold; margin: 20px 0 25px 0;">
+                <a href="#" style="color: #0066c0; text-decoration: none;">Join Meeting</a>
+            </p>
+            
+            <p>Let me know if you need to reschedule.</p>
+            
+            <p>Thanks,<br>
+            HR Team</p>
+        </div>
+    </div>
+    <div class="answer-option" data-option="true">
+        Yes it is legitimate
+        <div class="answer-explanation">Correct! This email uses the company domain, has no urgency/threats, and provides normal meeting information.</div>
+    </div>
+    <div class="answer-option" data-option="false">
+        No it is not legitimate
+        <div class="answer-explanation"> This is a legitimate email with proper sender domain and professional content.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i>  Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+
+<!-- Question 5 -->
+<div class="question-card" data-correct="b">
+    <div class="question-text">5. Why should you avoid using the same password for all accounts?</div>
+    <div class="answer-option" data-option="a">
+        It makes logging in too easy
+        <div class="answer-explanation">While this may be true, it's not the security reason we're concerned about.</div>
+    </div>
+    <div class="answer-option" data-option="b">
+        If one account is hacked, others can be hacked too
+        <div class="answer-explanation">Correct! Password reuse creates a domino effect - one breach compromises all accounts.</div>
+    </div>
+    <div class="answer-option" data-option="c">
+        Hackers can guess strong passwords
+        <div class="answer-explanation"> Strong passwords are hard to guess, but reuse makes them vulnerable after breaches.</div>
+    </div>
+    <div class="answer-option" data-option="d">
+        Websites prefer unique passwords
+        <div class="answer-explanation"> While websites may suggest it, the real risk is cross-account compromise.</div>
+    </div>
+    <div class="question-feedback correct">
+        <i class="fas fa-check-circle"></i> Correct! Well done.
+    </div>
+    <div class="question-feedback incorrect">
+        <i class="fas fa-times-circle"></i>  Here's why your answer was wrong:
+    </div>
+    <button class="quiz-btn question-submit-btn">Submit Answer</button>
+</div>
+            
+            <!-- Quiz Feedback -->
+            <div class="quiz-feedback pass">
+                <h3><i class="fas fa-check-circle"></i> Congratulations!</h3>
+                <p>You scored <span id="final-score">0</span>/5! You've successfully completed this quiz.</p>
+                <p>Your progress has been updated.</p>
+                <a href="index.html" class="action-btn" style="margin-top: 15px;"><i class="fas fa-home"></i> Return to Home</a>
+            </div>
+            
+            <div class="quiz-feedback fail">
+                <h3><i class="fas fa-times-circle"></i> Try Again</h3>
+                <p>You scored <span id="final-score-fail">0</span>/5. Please review the explanations and try again.</p>
+                <a href="section1.html" class="action-btn" style="margin-top: 15px;"><i class="fas fa-book"></i> Review Phishing Info</a>
+                <button id="retryQuiz" class="action-btn" style="margin-top: 15px;"><i class="fas fa-redo"></i> Retry Quiz</button>
+            </div>
+            
+            <div class="quiz-navigation">
+                <button id="prevQuestion" class="quiz-btn" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+                <button id="nextQuestion" class="quiz-btn">Next <i class="fas fa-arrow-right"></i></button>
+                <button id="showResults" class="quiz-btn" style="display: none;"><i class="fas fa-chart-bar"></i> View Results</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="privacypolicy.html" class="footer-btn"><i class="fas fa-lock"></i> Privacy Policy</a>
+    </footer>
+    
+    <script src="script.js">
+    </script>
+    <script> 
+    
+// Mobile menu emergency fix
+document.getElementById('mobileMenuBtn')?.addEventListener('click', function(e) {
+    e.stopPropagation();
+    document.getElementById('mobileMenu').classList.toggle('active');
+});
+
+// Close when clicking outside
+document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.getElementById('mobileMenuBtn');
+    if (menu?.classList.contains('active') && !menu.contains(e.target) && e.target !== btn) {
+        menu.classList.remove('active');
+    }
+});
+
+
+
+
+    </script>
+</body>
+</html>
