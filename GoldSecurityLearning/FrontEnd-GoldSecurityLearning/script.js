@@ -697,7 +697,7 @@ document.getElementById('signinForm').addEventListener('submit', async (e) => {
         localStorage.setItem('authToken', data.token); //EX for JWT
         
         // Redirect after login
-        window.location.href = 'dashboard.html'; 
+        window.location.href = 'index.html'; 
 
     } catch (error) {
         // Handle errors
