@@ -26,6 +26,25 @@ body.section1 footer {
     width: 100%;
     height: 60px; /* Set your footer's exact height */
 }
+.progress-container {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+    height: 24px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #f39c12, #e67e22);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 24px;
+    transition: width 0.4s ease-in-out;
+}
 </style>
 <body>
     <!-- Welcome Modal -->
@@ -227,6 +246,28 @@ body.section1 footer {
                 mobileMenu.classList.remove('active');
             }
         });
+document.addEventListener('DOMContentLoaded', () => {
+    const progressBar = document.querySelector('.progress-bar');
+    const completed = JSON.parse(localStorage.getItem('completedQuizzes') || '[]');
+    const percentage = (completed.length / 4) * 100;
+
+    progressBar.style.width = `${percentage}%`;
+    progressBar.textContent = `${percentage}% Complete`;
+});
     </script>
+<script>
+  function updateCourseProgress() {
+    const completedQuizzes = JSON.parse(localStorage.getItem('completedQuizzes') || '[]');
+    const percentage = Math.floor((completedQuizzes.length / 4) * 100);
+    const progressBar = document.querySelector('.progress-bar');
+
+    if (progressBar) {
+      progressBar.style.width = `${percentage}%`;
+      progressBar.textContent = `${percentage}% Complete`;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', updateCourseProgress);
+</script>
 </body>
 </html>

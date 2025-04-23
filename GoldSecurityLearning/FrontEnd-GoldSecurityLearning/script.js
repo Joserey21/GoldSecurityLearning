@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // REPLACE 
                     //API URL
 
-                    fetch('https://your-backend-api.com/save-quiz', {
+                    fetch('http://localhost:3001/api/submit', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(quizData)
